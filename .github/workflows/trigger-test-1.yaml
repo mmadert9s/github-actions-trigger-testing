@@ -1,0 +1,14 @@
+name: Trigger test 1 (should not work)
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ./docs
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello, World!"
